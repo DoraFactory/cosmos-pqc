@@ -22,7 +22,7 @@ BUILD_FLAGS := -ldflags '$(ldflags)'
 # Install #
 ###########
 
-all: install
+all: install init
 
 install:
 	@echo "--> ensure dependencies have not been modified"
@@ -32,3 +32,6 @@ install:
 
 init:
 	./scripts/init.sh
+
+clean:
+	@rm *.key
